@@ -1,0 +1,213 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 40px;
+    background-color: rgba(222, 236, 240, 0.678);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.work-area2 {
+    background: url("img/logo.2.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(8, 8, 8);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ccc;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    box-shadow: 4px 4px 10px rgba(235, 231, 231, 0.7);
+    border-radius: 5px;
+}
+
+.imagen-galery-button img {
+    width: 190px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.imagen-galery-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.imagen-galery-button img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(228, 225, 225, 0.5);
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la ventana */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 107%; /* Altura completa */
+    overflow: auto; /* Permite el desplazamiento si el contenido es grande */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente más oscuro */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    margin: 5% auto; /* Centrando el modal */
+    padding: 10px; /* Espaciado interno */
+    width: 80%; /* Ancho del modal */
+    max-height: 90%; /* Limita la altura para el desplazamiento */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    position: relative; /* Para posicionar el botón de cierre */
+    text-align: center; /* Centrar contenido dentro del modal */
+}
+
+/* Botón de cierre */
+.close {
+    color: #aaa; /* Color del texto */
+    float: right; /* Mover a la derecha */
+    font-size: 28px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor de mano al pasar */
+}
+
+/* Cambiar color al pasar el ratón sobre el botón de cierre */
+.close:hover,
+.close:focus {
+    color: black; /* Cambia color al pasar el ratón */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cursor de mano al pasar */
+}
+
+/* Título del modal */
+#modal-title {
+    margin-top: 0; /* Sin margen superior */
+    font-size: 24px; /* Aumenta el tamaño de la fuente */
+    color: #333; /* Color del texto */
+    border-bottom: 2px solid #007bff; /* Línea inferior azul */
+    padding-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo de la imagen */
+#modal-image {
+    display: inline-block; /* Asegura que se muestra como bloque */
+    max-width: 100%; /* Ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin: 20px 0; /* Espaciado arriba y abajo */
+}
+
+/* Estilo de las estrellas */
+.star {
+    cursor: pointer;
+    font-size: 20px; /* Ajusta el tamaño como desees */
+    color: gray; /* Color por defecto */
+}
+
+.star.selected {
+    color: gold; /* Color para estrellas seleccionadas */
+}
+
+
+/* Comentarios */
+#comment-list {
+    margin-top: 20px; /* Espaciado superior */
+    max-height: 200px; /* Altura máxima para los comentarios */
+    overflow-y: auto; /* Permitir desplazamiento en comentarios */
+    border-top: 1px solid #eee; /* Línea superior */
+    padding-top: 10px; /* Espaciado superior */
+}
+
+/* Estilo del comentario */
+.comment-item {
+    padding: 5px; /* Espaciado interno */
+    border-bottom: px solid #080808; /* Línea entre comentarios */
+}
+
+
+/* Estilos del input */
+#comment-input {
+    width: calc(100% - 20px); /* Ajusta el ancho */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Estilos para comentarios */
+.comments-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.comments-container textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.download-btn {
+    display: inline-block; /* Hace que el enlace se comporte como un botón */
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    margin-top: 15px; /* Espacio por encima */
+}
+
+.download-btn:hover {
+    background-color: #218838; /* Color de fondo más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Aumento ligero de tamaño */
+}
+

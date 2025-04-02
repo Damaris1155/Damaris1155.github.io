@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliocodex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar libros...">
+        <button id="search-btn">Buscar</button>
+    </div>
+
+    <div class="work-area2">
+        <h1>"El conocimiento profundo es la luz que guía nuestras decisiones en momentos de incertidumbre."</h1>
+    </div>
+    <hr class="espaciado">
+ 
+    <div class="imagen-galery">
+        <div class="imagen-galery-button">
+            <img src="img/quijote.jpg" alt="Don Quijote de la Mancha" data-title="Don Quijote de la Mancha" onclick="openModal(1)">
+            <img src="img/tom.jpeg" alt="La cabaña del tío Tom" data-title="La cabaña del tío Tom" onclick="openModal(2)">
+            <img src="img/lazarillo.png" alt="Lazarillo de Tormes" data-title="Lazarillo de Tormes" onclick="openModal(3)">
+            <img src="img/caballero.png" alt="El caballero de la armadura oxidada" data-title="El caballero de la armadura oxidada" onclick="openModal(4)">
+            <img src="img/elviejo.png" alt="El viejo y el mar" data-title="El viejo y el mar" onclick="openModal(5)">
+            <img src="img/gabiota.jpg" alt="Juan Salvador Gaviota" data-title="Juan Salvador Gaviota" onclick="openModal(6)"> <!-- Corregido aquí -->
+            <img src="img/romeo.png" alt="Romeo y Julieta" data-title="Romeo y Julieta" onclick="openModal(7)">
+            <img src="img/maria.png" alt="Maria" data-title="Maria" onclick="openModal(8)">
+            <img src="img/soledad.jpeg" alt="Cien años de soledad" data-title="Cien años de soledad" onclick="openModal(9)">
+            <img src="img/colera.png" alt="El amor en los tiempos del cólera" data-title="El amor en los tiempos del cólera" onclick="openModal(10)">
+            <img src="img/coroner.png" alt="El coronel no tiene quien le escriba" data-title="El coronel no tiene quien le escriba" onclick="openModal(11)">
+            <img src="img/cronicas.jpg" alt="Crónica de una muerte anunciada" data-title="Crónica de una muerte anunciada" onclick="openModal(12)">
+            <img src="img/iliada.jpeg" alt="La iliada" data-title="La iliada" onclick="openModal(13)">
+            <img src="img/sangre.jpg" alt="Sangre" data-title="sangre" onclick="openmodal(14)">
+        </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="Imagen del libro">
+            <div class="modal-details">
+                <h2 id="modal-title">Título del libro</h2>
+                <p id="modal-text" class="modal-summary">Este es el resumen del libro seleccionado.</p>
+
+                <div class="rating-container">
+                    <p>Calificar:</p>
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+
+                <div class="comments-container">
+                    <label for="comments">Comentarios:</label>
+                    <textarea id="comments" placeholder="Escribe un comentario..."></textarea>
+                    <div class="button-container">
+                        <button id="comment-btn">Enviar comentario</button>
+                    </div>
+                </div>
+
+                <div class="comment-list" id="comment-list">
+                    <!-- Comentarios se agregarán aquí -->
+                </div>
+
+                <a id="download-link" class="download-btn" href="#" download>Leer libro</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
